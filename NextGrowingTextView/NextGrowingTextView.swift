@@ -263,6 +263,11 @@ extension NextGrowingTextView {
     }
 
     // MARK: TextView
+    
+    public var disablePasteText: Bool{
+        get { return textView.tag > 0}
+        set { textView.tag = newValue ? 1 : 0}
+    }
 
     public var returnKeyType: UIReturnKeyType {
         get { return textView.returnKeyType }

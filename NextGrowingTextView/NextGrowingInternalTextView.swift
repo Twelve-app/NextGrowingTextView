@@ -82,6 +82,15 @@ internal class NextGrowingInternalTextView: UITextView {
     
     // MARK: Private
     
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        if self.tag > 0{
+            if action == #selector(paste(_:)){
+                return false
+            }
+        }
+        return super.canPerformAction(action,withSender: sender)
+    }
+    
     fileprivate var displayPlaceholder: Bool = true {
         didSet {
             if oldValue != self.displayPlaceholder {
