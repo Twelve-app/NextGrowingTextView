@@ -273,6 +273,11 @@ extension NextGrowingTextView {
         get { return textView.returnKeyType }
         set { textView.returnKeyType = newValue }
     }
+
+    public var keyboardAppearance: UIKeyboardAppearance {
+        get { return textView.keyboardAppearance }
+        set { textView.keyboardAppearance = newValue }
+    }
     
     public var spellCheckingType: UITextSpellCheckingType {
         get { return textView.spellCheckingType }
