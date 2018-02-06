@@ -279,6 +279,11 @@ extension NextGrowingTextView {
         set { textView.keyboardAppearance = newValue }
     }
     
+    public var enablesReturnKeyAutomatically: Bool {
+        get { return textView.enablesReturnKeyAutomatically }
+        set { textView.enablesReturnKeyAutomatically = newValue }
+    }
+    
     public var spellCheckingType: UITextSpellCheckingType {
         get { return textView.spellCheckingType }
         set { textView.spellCheckingType = newValue }
