@@ -264,6 +264,10 @@ extension NextGrowingTextView {
 
     // MARK: TextView
     
+    public func moveCursorAtBeginning() {
+        textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
+    }
+    
     public var disablePasteText: Bool{
         get { return textView.tag > 0}
         set { textView.tag = newValue ? 1 : 0}
