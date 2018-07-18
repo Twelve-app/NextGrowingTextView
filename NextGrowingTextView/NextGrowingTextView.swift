@@ -265,6 +265,7 @@ extension NextGrowingTextView {
     // MARK: TextView
     
     public func moveCursorAtBeginning() {
+        guard textView.selectedTextRange != textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument) else { return }
         textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
     }
     
